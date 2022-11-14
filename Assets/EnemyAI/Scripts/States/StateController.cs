@@ -24,6 +24,7 @@ public class StateController : MonoBehaviour
         {
             currentState = newState;
             stateBehaviourController.ActivateStateBehaviourByState(newState);
+            enemyMovement.SetNavmeshAgentSettingsByState(newState);
         }
     }
 

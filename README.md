@@ -23,7 +23,7 @@ A custom [Action](https://github.com/jackhoefnagel/ExampleEnemyAIUnity/blob/main
 ## State Conditions
 
 Use [State Conditions](https://github.com/jackhoefnagel/ExampleEnemyAIUnity/blob/main/Assets/EnemyAI/Scripts/StateConditions/StateCondition.cs) to configure how to go from one state to another, based on Sensors, and configure how long these Sensors should be detecting something before transitioning to the target state.
-The boolean can be inverted, meaning that you can have a State Condition that states that the detection should be false.
+The boolean can be inverted, meaning that you can have a Sensor Condition that states that the detection should be false.
 
 ![](Media/StateCondition.png)
 

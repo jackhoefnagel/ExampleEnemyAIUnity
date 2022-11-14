@@ -11,7 +11,9 @@ public class Action_InitStateGraphics : Action
 
     private void OnEnable()
     {
-        enemyGraphics.ChangeGraphicState(graphicStateToTransitionTo);        
+        isActionFinished = false;
+        enemyGraphics.ChangeGraphicState(graphicStateToTransitionTo);
+        isActionFinished = true;
     }
 
     public override bool IsActionFinished()

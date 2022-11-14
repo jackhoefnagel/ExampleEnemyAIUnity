@@ -8,8 +8,7 @@ public class StateBehaviour : MonoBehaviour
     public List<Action> actions;
 
     private Coroutine cor_ProcessActions;
-
-    public int i;
+    private int i;
 
     private void OnEnable()
     {
@@ -30,7 +29,9 @@ public class StateBehaviour : MonoBehaviour
 
     private void OnDisable()
     {
-        if(cor_ProcessActions != null)
+        DeactivateAllActions();
+
+        if (cor_ProcessActions != null)
         {
             StopCoroutine(cor_ProcessActions);
             cor_ProcessActions = null;            
@@ -55,9 +56,14 @@ public class StateBehaviour : MonoBehaviour
             }           
         }
 
+        DeactivateAllActions();
+    }
+
+    private void DeactivateAllActions()
+    {
         for (int j = 0; j < actions.Count; j++)
         {
             actions[j].gameObject.SetActive(false);
-        }        
+        }
     }
 }

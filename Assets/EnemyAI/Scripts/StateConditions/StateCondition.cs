@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Listable and configurable reference for the Inspector,
-//  indicating whether a sensor should check if it *is* or *isn't* detecting something
+//  indicating whether a sensor should check if it *should* or *shouldn't* detect something
 [System.Serializable]
 public class SensorCondition
 {

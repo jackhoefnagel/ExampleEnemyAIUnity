@@ -13,6 +13,6 @@ public class PlayerInputMovement : MonoBehaviour
         Vector3 horizontal = camera.transform.right * Input.GetAxis("Horizontal") * moveSpeed;
         Vector3 forward = camera.transform.forward * Input.GetAxis("Vertical") * moveSpeed;
         forward.y = 0;
-        rb.velocity = horizontal + forward;
+        rb.AddForce(horizontal + forward);
     }
 }
